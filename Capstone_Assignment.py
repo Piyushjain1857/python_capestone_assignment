@@ -2,29 +2,29 @@
 
 class Person:
     def __init__(self, name, age):
-        self.n = name
-        self.a = age
+        self.name = name
+        self.age = age
 
 class Student(Person):
     def __init__(self, name, age, course):
         super().__init__(name, age)
-        self.c = course
+        self.course = course
 
 class Exam(Student):
-    def __init__(self, name, age, course, marks1, marks2, marks3):
+    def __init__(self, name, age, course, cs_marks, python_marks, math_marks):
         super().__init__(name, age, course)
-        self.m1 = marks1
-        self.m2 = marks2
-        self.m3 = marks3
-        self.t = self.m1 + self.m2 + self.m3
+        self.cs_marks = cs_marks
+        self.python_marks = python_marks
+        self.math_marks = math_marks
+        self.t = self.python_marks + self.python_marks + self.math_marks
 
     def show(self):
-        print(f"Name:- {self.n}")
-        print(f"Age:- {self.a}")
-        print(f"Course:- {self.c}")
-        print(f"Marks1:- {self.m1}")
-        print(f"Marks2:- {self.m2}")
-        print(f"Marks3:- {self.m3}")
+        print(f"Name:- {self.name}")
+        print(f"Age:- {self.age}")
+        print(f"Course:- {self.course}")
+        print(f"Cs_marks:- {self.python_marks}")
+        print(f"Python_marks:- {self.python_marks}")
+        print(f"Math_marks:- {self.math_marks}")
         print(f"Total Marks:- {self.t}")
 
 student = Exam("Piyush", 18, "BCA", 97, 94, 98)
